@@ -22,8 +22,8 @@ const NoticeBanner = () => {
       <h1 className="text-xl font-urbanist font-semibold text-primary">
         Your Vision, Our Construction
       </h1>
-      <h3 className="text-lg font-bold">Sqft 2100/-</h3>
-      <h4>Rate Starts for new buildings</h4>
+      {/* <h3 className="text-lg font-bold">Sqft 2100/-</h3>
+      <h4>Rate Starts for new buildings</h4> */}
       <div className="flex flex-col items-center gap-3">
         <RepeatRender
           icons={<IoLocationSharp className="ml-5" />}
