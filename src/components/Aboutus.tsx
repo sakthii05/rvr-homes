@@ -39,7 +39,7 @@ const Aboutus = () => {
     },
   ];
   return (
-    <section className="py-[5%] ">
+    <section className=" py-[10%] md:py-[5%] ">
       <ViewLimit>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-5 md:px-10">
           <div className="col-span-2 space-y-5">
@@ -86,12 +86,12 @@ const Aboutus = () => {
         >
           {images.map((src, idx) => (
             <SwiperSlide key={idx}>
-              <div className="relative w-full h-[450px]">
+              <div className="relative w-full h-[450px] ">
                 <Image
                   src={src}
                   alt={`Slide ${idx + 1}`}
                   fill
-                  className=" object-cover "
+                  className=" object-cover rounded-lg"
                 />
               </div>
             </SwiperSlide>
@@ -100,7 +100,7 @@ const Aboutus = () => {
       </div>
       <ViewLimit>
         <div className="flex justify-center pt-[5%] px-5">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-[8%] md:w-[90%] lg:w-[80%] ">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:w-[90%] lg:w-[80%] ">
             {counts.map((count, index) => (
               <div key={index} className="space-y-2 font-medium">
                 <LiveCount count={count.count} suffix={count.suffix} className={'font-medium font-figtree text-4xl md:text-5xl'}  />

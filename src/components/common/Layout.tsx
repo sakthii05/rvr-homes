@@ -6,15 +6,14 @@ import Footer from "./Footer";
 
 const Layout = (props: { children: ReactNode }) => {
   return (
-    <div className="flex justify-center overflow-hidden ">
-      <div className="font-figtree w-screen">
-        <main className="w-full">
+    <div className="flex justify-center">
+      <div className="font-figtree w-full">
+        <>
           <TopBar />
-          {props.children}
-        </main>
-        <footer className="flex justify-center">
-          {/* <Footer /> */}
-        </footer>
+          <main>{props.children}</main>
+        </>
+
+        <footer className="flex justify-center h-[50vh]">{/* <Footer /> */}</footer>
       </div>
     </div>
   );
