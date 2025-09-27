@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/common/Layout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const geistSans = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
 });
 
