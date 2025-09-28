@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ViewLimit from "./common/ViewLimit";
+import { ImLocation } from "react-icons/im";
 
 const HeroSection = () => {
   return (
@@ -10,6 +11,12 @@ const HeroSection = () => {
           <h3 className="text-sm md:text-lg font-medium">
             Construction - Renovation - Interior
           </h3>
+          <div className="flex gap-2 items-center justify-center">
+            <div className="animate-bounce text-secondary text-xl">
+              <ImLocation />
+            </div>
+            <h3 className="text-lg font-medium">Chennai</h3>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold leading-normal md:leading-relaxed text-center">
             Buliding Dreams,
             <span className="bg-[url(/images/brick.webp)] bg-cover bg-center rounded-md px-1 ml-1 text-background">

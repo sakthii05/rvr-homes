@@ -13,7 +13,7 @@ const Layout = (props: { children: ReactNode }) => {
           <main>{props.children}</main>
         </>
 
-        <footer className="flex justify-center h-[50vh]">{/* <Footer /> */}</footer>
+        <footer className="flex justify-center h-[80vh] bg-blue-500">{/* <Footer /> */}</footer>
       </div>
     </div>
   );

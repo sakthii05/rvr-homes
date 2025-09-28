@@ -13,17 +13,20 @@ const Services = () => {
   const cards = [
     {
       title: "New Home Construction",
-      description: "",
+      description:
+        "At RVR Homes, we specialize in building modern style apartments that balance tradition and contemporary living. Our constructions are designed with durability, comfort, and natural light in mind, ensuring every detail enhances family life. Using premium materials and trusted engineering, we create homes that last for generations. We bring your dream home to life with clarity and care.",
       image: "",
     },
     {
       title: "Renovation",
-      description: "",
+      description:
+        "Our renovation service transforms outdated spaces into fresh, functional, and stylish homes. Whether it's upgrading your kitchen, bathroom, or the entire apartment, we modernize while retaining cultural charm. With structural improvements and premium finishes, we give your home a complete makeover. Expect seamless execution, timely delivery, and stunning results.",
       image: "",
     },
     {
       title: "Interior Design",
-      description: "",
+      description:
+        "We design interiors that combine elegance, practicality, and personal taste for Tamil Nadu homes. Our approach maximizes every inch of space, blending wooden accents, neutral tones, and soft lighting for a timeless look. From living rooms to kitchens and bedrooms, we customize designs that reflect your lifestyle. The result is a home that feels modern, warm, and truly yours.",
       image: "",
     },
   ];
