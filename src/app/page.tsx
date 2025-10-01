@@ -1,5 +1,6 @@
 import Aboutus from "@/components/Aboutus";
 import NoticeBanner from "@/components/common/NoticeBanner";
+import Gallery from "@/components/Gallery";
 import HeroSection from "@/components/HeroSection";
 import Services from "@/components/Services";
 import WeWork from "@/components/WeWork";
@@ -12,10 +13,11 @@ export default function Home() {
   return (
     <>
       {/* <NoticeBanner /> */}
-      <HeroSection/>
-      <Aboutus/>
-      <Services/>
-      <WeWork/>
+      <HeroSection />
+      <Aboutus />
+      <Services />
+      <WeWork />
+      <Gallery />
       {/* <div className="h-screen bg-gray-400"></div> */}
     </>
   );

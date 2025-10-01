@@ -4,6 +4,7 @@ import ViewLimit from "./common/ViewLimit";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,19 +16,20 @@ const Services = () => {
       title: "New Home Construction",
       description:
         "At RVR Homes, we specialize in building modern style apartments that balance tradition and contemporary living. Our constructions are designed with durability, comfort, and natural light in mind, ensuring every detail enhances family life. Using premium materials and trusted engineering, we create homes that last for generations. We bring your dream home to life with clarity and care.",
-      image: "",
+      image: "/images/services/home.webp",
+    },
+
+    {
+      title: "Interior Design",
+      description:
+        "We design interiors that combine elegance, practicality, and personal taste for Tamil Nadu homes. Our approach maximizes every inch of space, blending wooden accents, neutral tones, and soft lighting for a timeless look. From living rooms to kitchens and bedrooms, we customize designs that reflect your lifestyle. The result is a home that feels modern, warm, and truly yours.",
+      image: "/images/services/interior.webp",
     },
     {
       title: "Renovation",
       description:
         "Our renovation service transforms outdated spaces into fresh, functional, and stylish homes. Whether it's upgrading your kitchen, bathroom, or the entire apartment, we modernize while retaining cultural charm. With structural improvements and premium finishes, we give your home a complete makeover. Expect seamless execution, timely delivery, and stunning results.",
-      image: "",
-    },
-    {
-      title: "Interior Design",
-      description:
-        "We design interiors that combine elegance, practicality, and personal taste for Tamil Nadu homes. Our approach maximizes every inch of space, blending wooden accents, neutral tones, and soft lighting for a timeless look. From living rooms to kitchens and bedrooms, we customize designs that reflect your lifestyle. The result is a home that feels modern, warm, and truly yours.",
-      image: "",
+      image: "/images/services/renovation.webp",
     },
   ];
 
@@ -77,7 +79,7 @@ const Services = () => {
   );
 
   return (
-    <section className="py-[10%] md:py-[5%]">
+    <section className="py-[10%] md:py-[5%] bg-accentBg">
       <ViewLimit>
         <div className=" flex justify-center ">
           <h2 className="md:text-lg bg-secondary rounded-full px-4 w-fit text-background ">
@@ -96,9 +98,22 @@ const Services = () => {
               key={i}
               className="h-screen sticky-card sticky top-0 flex justify-center items-center"
             >
-              <div className="h-[50vh] w-full lg:w-[90%] min-h-fit max-h-[500px] bg-slate-100 drop-shadow-lg rounded-2xl relative origin-top p-5 lg:p-10 grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-10">
-                <div className="bg-black rounded-xl col-span-1 h-[20vh] md:h-full md:col-span-2 "></div>
-                <div className="space-y-5 col-span-1 md:col-span-3 ">
+              <div
+                className={`h-[50vh] w-full lg:w-[90%] min-h-fit max-h-[500px] ${
+                  i === 1
+                    ? "bg-[#101014] text-background"
+                    : " text-foreground bg-[#e9ecf2]"
+                }  drop-shadow-lg rounded-2xl relative origin-top p-5 lg:p-5 grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-10`}
+              >
+                <div className="relative rounded-xl overflow-hidden col-span-1 h-[30vh] md:h-full md:col-span-2 ">
+                  <Image
+                    src={card.image}
+                    fill
+                    className=" object-cover "
+                    alt={card.title}
+                  />
+                </div>
+                <div className="space-y-5 col-span-1 md:col-span-3 lg:mt-5">
                   <h4 className=" text-3xl md:text-4xl font-medium">
                     {card.title}
                   </h4>
