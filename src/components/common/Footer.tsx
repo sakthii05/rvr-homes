@@ -32,9 +32,9 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative w-full text-foreground bg-accentBg">
-      <div className="relative p-5 rounded-b-[5rem] h-10 bg-background w-full shadow-xl"></div>
-      <div className=" flex justify-center px-10">
+    <div className="relative w-full text-foreground bg-[url(/images/footer.png)] bg-cover">
+      {/* <div className="relative p-5 rounded-b-[5rem] h-10 bg-background w-full shadow-xl"></div> */}
+      <div className="  flex justify-center px-10">
         <div className="w-full lg:w-[75%]">
           <div className="flex flex-wrap justify-between gap-5  border-b-2 border-gray-300 py-12 sm:py-20  font-medium">
             <div className="space-y-3">
@@ -42,35 +42,28 @@ const Footer = () => {
               <div className="gap-2 flex flex-col text-sm">
                 <div className="flex gap-3 items-center">
                   <IoMail className="text-xl" />
-                  <div>dlenterprises025@gmail.com</div>
+                  <div>info.rvrhomes@gmail.com</div>
                 </div>
                 <div className="flex gap-3 items-center">
                   <BsTelephoneFill className="text-xl" />
-                  <div>+91 9789789341</div>
+                  <div>+91 9150346622</div>
                 </div>
               </div>
             </div>
             <FooterMenus
               title="Service"
               menus={[
-                { label: "CNC router Cutting", link: "/" },
-                { label: "Co2 Laser Cutting", link: "/" },
-                { label: "Engraving", link: "/" },
-                { label: "Thermo Bending", link: "/" },
+                { label: "Home Construction", link: "/#services" },
+                { label: "Renovation", link: "/#services" },
+                { label: "Interior Design", link: "/#services" },
               ]}
             />
-            <FooterMenus
-              title="Products"
-              menus={[
-                { label: "Polycarbonate", link: "/products#pc" },
-                { label: "Acrylic", link: "/products#acrylic" },
-                { label: "Delrin", link: "/products#delrin" },
-              ]}
-            />
+
             <FooterMenus
               title="Company"
               menus={[
                 { label: "Home", link: "/" },
+                { label: "About us", link: "/#aboutus" },
                 { label: "Terms & conditions", link: "/terms-and-conditions" },
                 { label: "Privacy Policy", link: "/privacy-policy" },
               ]}
@@ -84,16 +77,17 @@ const Footer = () => {
               >
                 <MdLocationOn className="text-xl mt-1" />
                 <div>
-                  No 14, Everest Gardens, <br />
-                  Irrantamkattalai Thandalam Kovur, <br />
-                  Chennai-600128
+                  No 52,53, 1st floor Shop No:1, Kamarajar Salai,
+                  <br /> venkatesh nagar, Virugambakkam,
+                  <br />
+                  Chennai-600092
                 </div>
               </Link>
             </div>
           </div>
           <div className="flex w-full gap-5 justify-between py-5 flex-wrap text-xs font-medium">
             <div className="">
-              <div className="pb-1">© 2025 DL ENTERPRISES. All Rights Reserved</div>
+              <div className="pb-1">© 2025 RVR HOMES. All Rights Reserved</div>
               <Link
                 href={"https://linkedin.com/in/sakthivel-2022-webdev"}
                 target="_blank"
@@ -108,6 +102,7 @@ const Footer = () => {
               <PiInstagramLogoFill className="hover:text-primary hover:cursor-pointer" /> */}
             </div>
           </div>
+          <div className="h-80"></div>
         </div>
       </div>
     </div>

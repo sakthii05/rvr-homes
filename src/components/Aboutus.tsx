@@ -39,11 +39,11 @@ const Aboutus = () => {
     },
   ];
   return (
-    <section className=" py-[10%] md:py-[5%] ">
+    <section className=" py-[10%] md:py-[5%] " id='aboutus'>
       <ViewLimit>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-5 md:px-10">
           <div className="col-span-2 space-y-5">
-            <h2 className="md:text-lg bg-secondary rounded-full px-4 w-fit text-background ">
+            <h2 className="md:text-lg bg-secondary py-1 rounded-full px-4 w-fit text-background ">
               About Us
             </h2>
             <h3 className="text-2xl md:text-4xl">Complete Home Solutions</h3>

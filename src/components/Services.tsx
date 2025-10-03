@@ -79,10 +79,10 @@ const Services = () => {
   );
 
   return (
-    <section className="py-[10%] md:py-[5%] bg-accentBg">
+    <section className="py-[10%] md:py-[5%] bg-accentBg" id="services">
       <ViewLimit>
         <div className=" flex justify-center ">
-          <h2 className="md:text-lg bg-secondary rounded-full px-4 w-fit text-background ">
+          <h2 className="md:text-lg bg-secondary py-1 rounded-full px-4 w-fit text-background ">
             Services
           </h2>
         </div>

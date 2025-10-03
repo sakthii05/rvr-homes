@@ -36,7 +36,7 @@ const WeWork = () => {
         <div className="flex justify-center">
           <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-[10%] relative md:w-[80%] ">
             <div className="w-full lg:sticky h-fit lg:top-[10%] space-y-5">
-              <h2 className="md:text-lg bg-secondary rounded-full px-4 w-fit text-background ">
+              <h2 className="md:text-lg bg-secondary rounded-full px-4 py-1 w-fit text-background ">
                 How We Work
               </h2>
               <h3 className="text-xl md:text-4xl">
@@ -50,7 +50,7 @@ const WeWork = () => {
                   key={i}
                   className="bg-slate-100 w-full h-fit p-5  rounded-2xl"
                 >
-                  <div className=" h-72 w-full relative rounded-xl overflow-hidden">
+                  <div className=" h-80 w-full relative rounded-xl overflow-hidden">
                     <div className=" absolute left-0 z-10 bg-white/30 backdrop-blur-sm p-3 m-2 rounded-xl  ">
                       <div className="text-foreground font-medium text-lg">Step <span className="text-2xl font-semibold">0{i+1}</span></div>
                     </div>
