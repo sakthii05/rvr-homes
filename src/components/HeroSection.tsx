@@ -5,7 +5,7 @@ import { ImLocation } from "react-icons/im";
 
 const HeroSection = () => {
   return (
-    <section className=" mt-32 md:mt-20 pb-[5%]">
+    <section className="mt-20 pb-[5%]">
       <ViewLimit>
         <div className=" text-center space-y-5 px-5">
           <h3 className="text-sm md:text-lg font-medium">
@@ -26,7 +26,7 @@ const HeroSection = () => {
           </h1>
         </div>
         <div className="flex justify-center">
-          <div className="w-full h-[60vh] md:h-[75vh] relative">
+          <div className="w-full h-[60vh] md:h-[75vh] relative -top-7 md:top-2">
             <Image
               src={"/images/herohome.webp"}
               fill

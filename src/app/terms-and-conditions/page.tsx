@@ -14,7 +14,6 @@ const TandC = () => {
 
   return (
     <>
-      <title>Terms & conditions</title>
       <ViewLimit>
         <title>Terms & conditions</title>
         <div className="flex justify-center">

@@ -20,7 +20,7 @@ const Footer = () => {
             <Link
               href={menu.link}
               target="_self"
-              className="font-medium hover:text-primary"
+              className="font-medium  hover:text-secondary"
               key={index}
             >
               {menu.label}
@@ -32,9 +32,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative w-full text-foreground bg-[url(/images/footer.png)] bg-cover">
-      {/* <div className="relative p-5 rounded-b-[5rem] h-10 bg-background w-full shadow-xl"></div> */}
-      <div className="  flex justify-center px-10">
+    <div className="relative bg-[url(/images/sky.jpeg)]  w-full ">
+      <div className="  flex justify-center px-10 text-white">
         <div className="w-full lg:w-[75%]">
           <div className="flex flex-wrap justify-between gap-5  border-b-2 border-gray-300 py-12 sm:py-20  font-medium">
             <div className="space-y-3">
@@ -64,7 +63,10 @@ const Footer = () => {
               menus={[
                 { label: "Home", link: "/" },
                 { label: "About us", link: "/#aboutus" },
-                { label: "Terms & conditions", link: "/terms-and-conditions" },
+                {
+                  label: "Terms & conditions",
+                  link: "/terms-and-conditions",
+                },
                 { label: "Privacy Policy", link: "/privacy-policy" },
               ]}
             />
@@ -73,7 +75,7 @@ const Footer = () => {
               <Link
                 href={"https://maps.app.goo.gl/xVSvR9GUvBkwUDLa7"}
                 target="_blank"
-                className="flex gap-3 text-sm hover:text-primary "
+                className="flex gap-3 text-sm hover:text-secondary"
               >
                 <MdLocationOn className="text-xl mt-1" />
                 <div>
@@ -91,7 +93,7 @@ const Footer = () => {
               <Link
                 href={"https://linkedin.com/in/sakthivel-2022-webdev"}
                 target="_blank"
-                className="hover:text-primary"
+                className="hover:text-secondary"
               >
                 Developed by @sakthivel
               </Link>
@@ -102,9 +104,9 @@ const Footer = () => {
               <PiInstagramLogoFill className="hover:text-primary hover:cursor-pointer" /> */}
             </div>
           </div>
-          <div className="h-80"></div>
         </div>
       </div>
+      <div className="h-40 lg:h-[400px] bg-[url(/images/buildings.webp)] bg-cover w-full relative -bottom-10"></div>
     </div>
   );
 };

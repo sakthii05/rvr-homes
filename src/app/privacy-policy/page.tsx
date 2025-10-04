@@ -14,7 +14,6 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <title>Privacy Policy</title>
       <ViewLimit>
         <title>Privacy Policy</title>
         <div className="flex justify-center">

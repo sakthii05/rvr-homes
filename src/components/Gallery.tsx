@@ -6,17 +6,10 @@ import { EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import Image from "next/image";
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 const Gallery = () => {
-  // const images = [
-  //   "/images/about/livingroom.webp",
-  //   "/images/about/kitchen.webp",
-  //   "/images/about/balcony.webp",
-  //   "/images/about/bedroom.webp",
-  //   "/images/about/garden.webp",
-  //   "/images/about/bathroom.webp",
-  // ];
-
   const images = [
     {
       image: "/images/gallery/dining-room.webp",
@@ -24,9 +17,9 @@ const Gallery = () => {
       classnames: "h-[450px]",
     },
     {
-      image: "/images/about/livingroom.webp",
+      image: "/images/gallery/kitchen.webp",
       title: "Kitchen",
-      classnames: "h-80",
+      classnames: "h-96",
     },
     {
       image: "/images/gallery/children-room.webp",
@@ -56,9 +49,9 @@ const Gallery = () => {
     },
 
     {
-      image: "/images/about/livingroom.webp",
+      image: "/images/gallery/workspace.webp",
       title: "Workspace",
-      classnames: "h-80",
+      classnames: "h-96",
     },
     {
       image: "/images/gallery/bathroom.webp",
@@ -89,27 +82,41 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-[10%] md:py-[5%] px-5 md:px-10">
+    <section className="py-[10%] md:py-[5%]  lg:px-10">
       <ViewLimit>
         <div className=" flex justify-center ">
           <h2 className="md:text-lg bg-secondary  py-1 rounded-full px-4 w-fit text-background ">
             Gallery
           </h2>
         </div>
-        <h3 className="text-2xl md:text-4xl text-center py-5">
+        <h3 className="text-2xl md:text-4xl text-center py-5 px-5">
           A preview of what we can bring to life
         </h3>
         <div className="pt-[10%] flex justify-center">
-          <div className="md:hidden w-[80%] ">
-            {/* <Swiper
-              effect={"cards"}
+          <div className="lg:hidden w-full ">
+            <Swiper
+              effect={"coverflow"}
               grabCursor={true}
-              modules={[EffectCards]}
-              className=""
+              centeredSlides={true}
+              slidesPerView={1.3}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
             >
               {images.map((src, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="relative w-full h-[450px] ">
+                  <div className="relative w-full h-[500px] ">
+                    <div className=" absolute inset-0 bg-black/5 z-10 text-background flex items-end">
+                      <div className="p-5 text-xl font-semibold">
+                        {src.title}
+                      </div>
+                    </div>
                     <Image
                       src={src.image}
                       alt={`Slide ${idx + 1}`}
@@ -119,11 +126,11 @@ const Gallery = () => {
                   </div>
                 </SwiperSlide>
               ))}
-            </Swiper> */}
+            </Swiper>
           </div>
 
-          <div className="md:grid grid-cols-3 gap-5 hidden w-full ">
-            <div className=" mt-10 space-y-5">
+          <div className="lg:grid grid-cols-3 gap-7 hidden w-full ">
+            <div className=" mt-14 space-y-7">
               {images.map(
                 (card, i) =>
                   i <= 2 && (
@@ -133,7 +140,7 @@ const Gallery = () => {
                   )
               )}
             </div>
-            <div className="space-y-5">
+            <div className="space-y-7">
               {images.map(
                 (card, i) =>
                   i > 2 &&
@@ -144,7 +151,7 @@ const Gallery = () => {
                   )
               )}
             </div>
-            <div className="mt-10 space-y-5">
+            <div className="mt-14 space-y-7">
               {images.map(
                 (card, i) =>
                   i > 5 &&
