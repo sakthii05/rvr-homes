@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="space-y-3">
               <h4 className="text-lg font-semibold">Location</h4>
               <Link
-                href={"https://www.google.com/maps?q=12.999932,80.120671"}
+                href={"https://maps.app.goo.gl/xVSvR9GUvBkwUDLa7"}
                 target="_blank"
                 className="flex gap-3 text-sm hover:text-primary "
               >

@@ -19,36 +19,74 @@ const Gallery = () => {
 
   const images = [
     {
-      image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      image: "/images/gallery/dining-room.webp",
+      title: "Dining Room",
+      classnames: "h-[450px]",
     },
     {
       image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      title: "Kitchen",
+      classnames: "h-80",
     },
     {
-      image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      image: "/images/gallery/children-room.webp",
+      title: "Children's Room",
+      classnames: "h-96",
     },
     {
-      image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      image: "/images/gallery/livingroom.webp",
+      title: "Living Room",
+      classnames: "h-[450px]",
     },
     {
-      image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      image: "/images/gallery/bedroom.webp",
+      title: "Bed Room",
+      classnames: "h-96",
+    },
+
+    {
+      image: "/images/gallery/ceiling.webp",
+      title: "Ceiling",
+      classnames: "h-[500px]",
     },
     {
+      image: "/images/gallery/balcony.webp",
+      title: "Balcony",
+      classnames: "h-[420px]",
+    },
+
+    {
       image: "/images/about/livingroom.webp",
-      title: "",
-      classnames: "",
+      title: "Workspace",
+      classnames: "h-80",
+    },
+    {
+      image: "/images/gallery/bathroom.webp",
+      title: "Bathroom",
+      classnames: "h-96",
     },
   ];
+
+  const Imagecard = (props: {
+    card: { image: string; title: string; classnames: string };
+  }) => {
+    const { card } = props;
+    return (
+      <div
+        className={`${card.classnames} w-full rounded-xl relative overflow-hidden`}
+      >
+        <div className=" absolute inset-0 bg-black/5 z-10 text-background flex items-end">
+          <div className="p-5 text-xl font-semibold">{card.title}</div>
+        </div>
+        <Image
+          src={card.image}
+          alt={card.title}
+          fill
+          className=" object-cover"
+        />
+      </div>
+    );
+  };
 
   return (
     <section className="py-[10%] md:py-[5%] px-5 md:px-10">
@@ -86,19 +124,36 @@ const Gallery = () => {
 
           <div className="md:grid grid-cols-3 gap-5 hidden w-full ">
             <div className=" mt-10 space-y-5">
-              <div className="h-56 w-full rounded-lg bg-black"></div>
-              <div className="h-72 w-full rounded-lg bg-black"></div>
-              <div className="h-56 w-full rounded-lg bg-black"></div>
+              {images.map(
+                (card, i) =>
+                  i <= 2 && (
+                    <div key={i}>
+                      <Imagecard card={card} />
+                    </div>
+                  )
+              )}
             </div>
             <div className="space-y-5">
-              <div className="h-96 w-full rounded-lg bg-black"></div>
-              <div className="h-56 w-full rounded-lg bg-black"></div>
-              <div className="h-72 w-full rounded-lg bg-black"></div>
+              {images.map(
+                (card, i) =>
+                  i > 2 &&
+                  i <= 5 && (
+                    <div key={i}>
+                      <Imagecard card={card} />
+                    </div>
+                  )
+              )}
             </div>
             <div className="mt-10 space-y-5">
-              <div className="h-96 w-full rounded-lg bg-black"></div>
-              <div className="h-72 w-full rounded-lg bg-black"></div>
-              <div className="h-40 w-full rounded-lg bg-black"></div>
+              {images.map(
+                (card, i) =>
+                  i > 5 &&
+                  i <= 8 && (
+                    <div key={i}>
+                      <Imagecard card={card} />
+                    </div>
+                  )
+              )}
             </div>
           </div>
         </div>
