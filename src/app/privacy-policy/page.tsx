@@ -14,6 +14,7 @@ const PrivacyPolicy = () => {
 
   return (
     <>
+      <title>Privacy Policy</title>
       <ViewLimit>
         <title>Privacy Policy</title>
         <div className="flex justify-center">
@@ -22,8 +23,8 @@ const PrivacyPolicy = () => {
               PrivacyPolicy {`(04/10/2025)`}
             </h2>
             <p>
-              At <span className="font-semibold">RVR HOMES</span>, we
-              respect your privacy and are committed to protecting any personal
+              At <span className="font-semibold">RVR HOMES</span>, we respect
+              your privacy and are committed to protecting any personal
               information you share with us.
             </p>
             <List
