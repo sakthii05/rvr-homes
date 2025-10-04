@@ -63,7 +63,7 @@ const Aboutus = () => {
           </div>
         </div>
       </ViewLimit>
-      <div className="pt-[5%] ">
+      <div className="pt-[5%]">
         <Swiper
           modules={[Autoplay, FreeMode]}
           slidesPerView={1}

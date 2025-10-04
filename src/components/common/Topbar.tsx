@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { RiMenuFill } from "react-icons/ri";
-import { FiArrowUpRight } from "react-icons/fi";
 import { IoCall } from "react-icons/io5";
 import ViewLimit from "./ViewLimit";
 import Link from "next/link";
