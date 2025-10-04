@@ -19,7 +19,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        poppins: ["var(--font-geist-sans)"],
+        figtree: ["var(--font-figtree)"],
         inter: ["var(--font-geist-sans)"],
       },
       backgroundImage: {
@@ -31,7 +31,8 @@ const config: Config = {
         textlight:'#6e6e73;',
         primary:"#03BDFF",
         secondary:"#011A56",
-        accentBg:'#f2f1f3'
+        accentBg:'#fafafa',
+        borderColor:"#1e1e1e26"
       },
     },
   },

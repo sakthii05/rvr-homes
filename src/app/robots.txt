@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://rvrhomes.in/sitemap.xml
