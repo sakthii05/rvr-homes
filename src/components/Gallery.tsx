@@ -2,7 +2,6 @@
 import React from "react";
 import ViewLimit from "./common/ViewLimit";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import Image from "next/image";
