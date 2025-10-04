@@ -39,7 +39,7 @@ const Aboutus = () => {
     },
   ];
   return (
-    <section className=" py-[10%] md:py-[5%] " id='aboutus'>
+    <section className=" py-[10%] md:py-[5%] " id="aboutus">
       <ViewLimit>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-5 md:px-10">
           <div className="col-span-2 space-y-5">
@@ -57,8 +57,8 @@ const Aboutus = () => {
               interior design, our team combines modern design with top-quality
               craftsmanship to bring your vision to life. we ensure a seamless
               experience built on trust, clear communication, and attention to
-              detail. At RVR Homes, we don't just build spaces we create places
-              you,ll truly love to live in.
+              detail. At RVR Homes, we don&#39;t just build spaces we create
+              places you,ll truly love to live in.
             </p>
           </div>
         </div>
@@ -103,7 +103,11 @@ const Aboutus = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 md:w-[90%] lg:w-[80%] ">
             {counts.map((count, index) => (
               <div key={index} className="space-y-2 font-medium">
-                <LiveCount count={count.count} suffix={count.suffix} className={'font-medium font-figtree text-4xl md:text-5xl'}  />
+                <LiveCount
+                  count={count.count}
+                  suffix={count.suffix}
+                  className={"font-medium font-figtree text-4xl md:text-5xl"}
+                />
                 <h4 className="text-xl sm:text-2xl ">{count.title}</h4>
                 <p className="text-lg text-textlight ">{count.subtext}</p>
               </div>
