@@ -64,7 +64,7 @@ export default function RootLayout({
       <link rel="manifest" href="/site.webmanifest" />
       <meta
         name="google-site-verification"
-        content="RTd72Wk_uE4PKUzNDWWXEHZmUBm3_GiGY0VA"
+        content="RTd72Wk_uE4PKUzNDWWXEHZmUBm3_GiGY0VAgoElnaM"
       />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
