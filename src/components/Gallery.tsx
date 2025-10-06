@@ -84,7 +84,7 @@ const Gallery = () => {
     <section className="py-[10%] md:py-[5%]  lg:px-10">
       <ViewLimit>
         <div className=" flex justify-center ">
-          <h2 className="md:text-lg bg-secondary  py-1 rounded-full px-4 w-fit text-background ">
+          <h2 className="md:text-lg bg-lightBlue  py-1 rounded-full px-4 w-fit text-background ">
             Gallery
           </h2>
         </div>
