@@ -32,6 +32,7 @@ const config: Config = {
         primary:"#03BDFF",
         secondary:"#011A56",
         accentBg:'#fafafa',
+        lightBlue:"#3e92c4",
         borderColor:"#1e1e1e26"
       },
     },

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/common/Layout";
+import Head from "next/head";
 
-const geistSans = Figtree({
+const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
 });
@@ -12,7 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "RVR Homes",
@@ -48,27 +48,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        rel="icon"
-        type="image/png"
-        href="/favicon-96x96.png"
-        sizes="96x96"
-      />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="shortcut icon" href="/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link rel="manifest" href="/site.webmanifest" />
-      <meta
-        name="google-site-verification"
-        content="RTd72Wk_uE4PKUzNDWWXEHZmUBm3_GiGY0VAgoElnaM"
-      />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <Head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta
+          name="google-site-verification"
+          content="RTd72Wk_uE4PKUzNDWWXEHZmUBm3_GiGY0VAgoElnaM"
+        />
+      </Head>
+      <body className={`${figtree.variable} ${geistMono.variable} antialiased`}>
         <Layout>{children}</Layout>
       </body>
     </html>
