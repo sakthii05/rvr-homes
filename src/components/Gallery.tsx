@@ -1,12 +1,16 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import ViewLimit from "./common/ViewLimit";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import Image from "next/image";
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Gallery = () => {
   const images = [
@@ -50,7 +54,7 @@ const Gallery = () => {
     {
       image: "/images/gallery/workspace.webp",
       title: "Workspace",
-      classnames: "h-96",
+      classnames: "h-[400px]",
     },
     {
       image: "/images/gallery/bathroom.webp",
@@ -58,13 +62,37 @@ const Gallery = () => {
       classnames: "h-96",
     },
   ];
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const Imagecard = (props: {
     card: { image: string; title: string; classnames: string };
   }) => {
     const { card } = props;
+    useGSAP(
+      () => {
+        gsap.set(cardRef.current, {
+          autoAlpha: 0,
+          y: 160,
+        });
+
+        gsap.to(cardRef.current, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "center 90%",
+            end: "center 65%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      },
+      { scope: cardRef }
+    );
     return (
       <div
+        ref={cardRef}
         className={`${card.classnames} w-full rounded-xl relative overflow-hidden`}
       >
         <div className=" absolute inset-0 bg-black/5 z-10 text-background flex items-end">

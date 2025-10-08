@@ -1,12 +1,20 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { SiLinkedin } from "react-icons/si";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Footer = () => {
+  const footerImageRef = useRef<HTMLDivElement>(null);
+
   const FooterMenus = (props: {
     title: string;
     menus: { label: string; link: string }[];
@@ -14,8 +22,8 @@ const Footer = () => {
     const { title, menus } = props;
     return (
       <div className="space-y-3">
-        <h4 className="text-lg font-semibold">{title}</h4>
-        <div className="gap-2 flex flex-col text-sm">
+        <h4 className=" text-xl font-semibold">{title}</h4>
+        <div className="gap-2 flex flex-col ">
           {menus.map((menu, index) => (
             <Link
               href={menu.link}
@@ -31,8 +39,32 @@ const Footer = () => {
     );
   };
 
+  useGSAP(
+    () => {
+      gsap.set(".footer-image", {
+        y: 150,
+      });
+
+      gsap.to(".footer-image", {
+        y: 0,
+        duration: 1.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: footerImageRef.current,
+          start: "center 75%",
+          end: "center 65%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    },
+    { scope: footerImageRef }
+  );
+
   return (
-    <div className="relative bg-[url(/images/sky.jpeg)]  w-full ">
+    <div
+      className="relative bg-[url(/images/sky.jpeg)]  w-full  "
+      ref={footerImageRef}
+    >
       <div className="  flex justify-center px-10 text-white">
         <div className="w-full lg:w-[75%]">
           <div className="flex flex-wrap justify-between gap-5  border-b-2 border-gray-300 py-12 sm:py-20  font-medium">
@@ -87,15 +119,17 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex w-full gap-5 justify-between py-5 flex-wrap text-xs font-medium">
-            <div className="">
-              <div className="pb-1">© 2025 RVR HOMES. All Rights Reserved</div>
+          <div className="flex w-full gap-5 justify-between py-5 flex-wrap text-sm font-medium">
+            <div>
+              <div className="pb-1">
+                © {new Date().getFullYear()} RVR HOMES. All Rights Reserved
+              </div>
               <Link
                 href={"https://linkedin.com/in/sakthivel-2022-webdev"}
                 target="_blank"
                 className="hover:text-secondary"
               >
-                Developed by @sakthivel
+                Website Developed by @sakthivel
               </Link>
             </div>
 
@@ -106,7 +140,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="h-40 lg:h-[400px] bg-[url(/images/buildings.webp)] bg-cover w-full relative -bottom-10"></div>
+      <div className="h-40 lg:h-[400px] bg-[url(/images/buildings.webp)] bg-cover w-full relative -bottom-10 footer-image"></div>
     </div>
   );
 };
