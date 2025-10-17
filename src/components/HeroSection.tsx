@@ -82,7 +82,7 @@ const HeroSection = () => {
             <h3 className="text-lg font-medium location animate-in">Chennai</h3>
           </div>
           <h1 className="text-3xl md:text-5xl font-bold leading-normal md:leading-relaxed text-center hero-title animate-in">
-            Buliding Dreams,
+            Building Dreams,
             <br className="md:hidden" />
             <span className="bg-[url(/images/brick.webp)] bg-cover bg-center rounded-md px-1 ml-1 text-background">
               One Brick

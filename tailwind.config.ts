@@ -20,7 +20,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         figtree: ["var(--font-figtree)"],
-        inter: ["var(--font-geist-sans)"],
       },
       backgroundImage: {
         gradientBlue: "linear-gradient(to bottom, #000510 40%, #031438)",

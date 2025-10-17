@@ -17,7 +17,7 @@ const Topbar = () => {
       {
          autoAlpha: 1,
         y: 0,
-        duration: 1.5,
+        duration: 1.2,
         ease: "power2.out",
       },
       "-=0.1"
@@ -28,7 +28,7 @@ const Topbar = () => {
          autoAlpha: 1,
         x: 0,
         scale: 1,
-        duration: 1.2,
+        duration: 1,
         ease: "power2.out",
       },
       "-=0.1"
@@ -48,10 +48,18 @@ const Topbar = () => {
             className="logo animate-in"
           />
           <div className="flex items-center gap-5 text-lg font-medium menu animate-in">
-            <Link href="/#aboutus" target="_self" className="hidden md:block">
+            <Link
+              href="/#aboutus"
+              target="_self"
+              className="hidden md:block hover:text-lightBlue"
+            >
               About
             </Link>
-            <Link href="/#services" target="_self" className="hidden md:block">
+            <Link
+              href="/#services"
+              target="_self"
+              className="hidden md:block hover:text-lightBlue"
+            >
               Services
             </Link>
 
