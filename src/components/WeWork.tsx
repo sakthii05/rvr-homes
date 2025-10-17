@@ -35,8 +35,8 @@ const WeWork = () => {
       <ViewLimit>
         <div className="flex justify-center">
           <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-[10%] relative md:w-[80%] ">
-            <div className="w-full lg:sticky h-fit lg:top-[10%] space-y-5">
-              <h2 className="md:text-lg bg-lightBlue rounded-full px-4 py-1 w-fit text-background ">
+            <div className="w-full lg:sticky h-[35%] lg:top-[10%] space-y-5 ">
+              <h2 className="text-lg md:text-xl bg-lightBlue rounded-full px-4 py-1 w-fit text-background ">
                 How We Work
               </h2>
               <h3 className="text-xl md:text-4xl">
